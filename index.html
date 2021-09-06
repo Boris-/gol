@@ -1,10 +1,20 @@
-
-
-<!DOCTYPE html>
-<html>
+<head>
+    <meta charset = "UTF-8" />
+    <title>The Game of Life</title>
+    <link rel="stylesheet" href="life.css">    
+</head>
 <body>
 
-  <!--9NM40_$2b$21$C//roHGH1lnglRcJzmDyTeOV8cJXv1Fm6UFsv.olqGBl8JJTxkWgG--><title>puritan_communion</title><style>*{width:100vmin;height:100vmin;margin:auto;position:absolute;top:0;bottom:0;left:0;right:0;background:black}</style><canvas id=A></canvas><script>S=10145920,A.width=A.height=W=2160,C=A.getContext`2d`,M=Math,R=_=>(S+=1831565813,m=M.imul(S^S>>>15,1|S),m=m+M.imul(m^m>>>7,61|m)^m,(m^m>>>14)>>>0)/2**32,C.globalCompositeOperation="copy",C.imageSmoothingEnabled=false,T=0,h=432,I=C.createImageData(h,h),g=Array.from({length:h},_=>Array.from({length:h},_=>0|2*R())),p=Array(h).fill().map(_=>Array(h)),s=0,F=t=>{if(T==-1||requestAnimationFrame(F),d=t-s,33<d){for(s=t-d% 33,T++,j=1;j<h-1;j++)for(k=1;k<h-1;k++){for(n=0,u=-1;2>u;u++)for(v=-1;2>v;v++)n+=g[j+u][k+v];n-=g[j][k],p[j][k]=0===g[j][k]?3==n?1:0:2==n||3==n?1:0}for(j=0;j<h;j++)for(k=0;k<h;k++)g[j][k]=p[j][k];for(j=0;j<h;j++)for(k=0;k<h;k++)i=4*(j+k*h),I.data[i+3]=h,r=i+1,u=I.data[r],v=I.data[i],g[j][k]?(I.data[r]=h,I.data[i]=h):8<u?I.data[r]=u-8:4<v?(I.data[i]=v-4,128>v&&(I.data[i+2]=h)):2<v&&(I.data[i+2]=v-2);C.putImageData(I,0,0),C.drawImage(A,0,0,h,h,0,0,W,W)}},F()</script>
-</body>
-</html>
+<div id="gridContainer">
+    
+</div>
 
+<div class="controls">
+<button id="start"><span>Start</span></button>
+<button id="clear"><span>Clear</span></button>
+<button id="random"><span>Random</span></button>
+</div>
+    
+<script src="code.js"></script>
+    
+</body>
